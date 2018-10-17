@@ -2,13 +2,14 @@
 #include "Liste.h"
 #include <vector>
 #include <fstream>
+#include <stdlib.h>
 
 using namespace std;
 
 int main()
 {
-  float entier,y;
-  int choose, choose2;
+  float entier,y = 0;
+  int choose, choose2, choose3;
 
   vector <liste> tableau;
   ofstream fichier;
@@ -16,6 +17,8 @@ int main()
   fichier.open("notes.txt");
 
   debut:
+   system("clear");
+   debuta:
   cout <<" --- Bonjour --- "<<endl;
   cout <<"--- Que voulez vous faire ? ---"<<endl;
   cout <<"--- 1__Ajouter un reel__ ---"<<endl;
@@ -30,6 +33,7 @@ int main()
   {
     case 1:{
       menu1:
+       system("clear");
         cout <<"--- Que voulez vous faire ? ---"<<endl;
         cout <<"1 --- Ajouter un nombre --- "<<endl;
         cout <<"2 --- retourné au menu --- "<<endl;
@@ -37,6 +41,7 @@ int main()
 
         if(choose2 == 1)
         {
+           system("clear");
             cout <<"--- Saisir un entier --- "<<endl;
               cin >> entier;
               tableau.push_back(liste());
@@ -47,34 +52,51 @@ int main()
               y++;
               goto menu1;
               }
-              else
-              {
-                goto debut;
-              }
+          else
+          {
+            goto debut;
+          }
+              fichier.close();
             break;
         }
 
     case 2:{
-      for (int i=0; tableau.size(); i++)
-      {
-        cout<<"--- la liste ---"<<endl;
-          if (i == tableau.size())
-          {
-                cout <<"----------"<<endl;
-          }
-          else
-          {
-             cout << tableau[y].nombre << endl;
-          }
-      };
-
-
+      system("clear");
+      cout <<"--- liste ---"<<endl;
+      for (int i = 0;i<tableau.size();i++){
+              cout << tableau[i].nombre <<endl;
+            };
+            goto debuta;
     break;}
+    case 3:{
+      cout<<"--- choisissez le nombre à effacer ---"<<endl;
+        cin >> choose3;
+        y = 0;
+        while (choose3 != tableau[y].nombre)
+        if(choose3 != tableau[y].nombre)
+        {
+          y++;
+        }
+        else
+        {
+          tableau.pop_back();
+            cout << "C'est supprimé ! "<<endl;
+        }
+        goto debut;
 
 
+    break;
+  }
 
+case 4:{
 
+  break;
+}
 
+case 5:{
+  goto fin;
+  break;
+}
 
 
 
