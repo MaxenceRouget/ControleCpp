@@ -11,7 +11,7 @@ int main()
   float entier,y = 0;
   int choose, choose2, choose3;
 
-  vector <liste> tableau;
+  vector <float>tableau;
   ofstream fichier;
 
   fichier.open("notes.txt");
@@ -44,10 +44,10 @@ int main()
            system("clear");
             cout <<"--- Saisir un entier --- "<<endl;
               cin >> entier;
-              tableau.push_back(liste());
+              tableau.push_back(entier);
 
-              tableau[y].nombre = entier;
-               fichier<<tableau[y].nombre<<endl;
+              tableau[y] = entier;
+               fichier<<tableau[y]<<endl;
 
               y++;
               goto menu1;
@@ -64,7 +64,7 @@ int main()
       system("clear");
       cout <<"--- liste ---"<<endl;
       for (int i = 0;i<tableau.size();i++){
-              cout << tableau[i].nombre <<endl;
+              cout << tableau[i] <<endl;
             };
             goto debuta;
     break;}
@@ -72,38 +72,44 @@ int main()
       cout<<"--- choisissez le nombre à effacer ---"<<endl;
         cin >> choose3;
         y = 0;
-        while (choose3 != tableau[y].nombre)
-        if(choose3 != tableau[y].nombre)
-        {
-          y++;
-        }
-        else
-        {
-          tableau.pop_back();
-            cout << "C'est supprimé ! "<<endl;
-        }
+
+        while(choose3 != tableau[y])
+               {
+                 y++;
+               };
+        tableau.pop_back();
+        
         goto debut;
 
 
     break;
   }
 
-case 4:{
+    case 4:{
+      cout<<"--- choisissez le nombre à effacer ---"<<endl;
+        cin >> choose3;
+        y = 0;
+        while(y != tableau.size()){
+        if (choose3 == tableau[y])
+        {
+          tableau.pop_back();
+        }
+        if (choose3 != tableau[y])
+        {
+          y++;
+        }
+      };
+      goto debut;
+      break;
+    }
 
-  break;
+  case 5:{
+    goto fin;
+    break;
+    }
 }
-
-case 5:{
-  goto fin;
-  break;
-}
-
-
-
-
-  }
 
   fin:
-
+cout <<" Au revoir "<<endl;
   return 0;
 }
