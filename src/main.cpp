@@ -126,7 +126,7 @@ int main()
                {
                  y++;
                };
-        tableau.pop_back();
+        tableau.erase(tableau.begin(),tableau.begin()+y);
 
         goto debut;
 
@@ -147,7 +147,7 @@ int main()
         while(y != tableau.size()){
         if (choose3 == tableau[y])
         {
-          tableau.pop_back();
+          tableau.erase(tableau.begin()+y);
         }
         if (choose3 != tableau[y])
         {
