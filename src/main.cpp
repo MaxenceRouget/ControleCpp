@@ -1,5 +1,4 @@
 #include <iostream>
-#include "Liste.h"
 #include <vector>
 #include <fstream>
 #include <stdlib.h>
@@ -78,7 +77,7 @@ int main()
                  y++;
                };
         tableau.pop_back();
-        
+
         goto debut;
 
 
