@@ -1,0 +1,59 @@
+\hypertarget{main_8cpp}{}\section{src/main.cpp File Reference}
+\label{main_8cpp}\index{src/main.\+cpp@{src/main.\+cpp}}
+
+
+Fichier principal ou tout se passe.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+Include dependency graph for main.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{main_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Fichier principal ou tout se passe. 
+
+\begin{DoxyAuthor}{Author}
+Maxence 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{main.\+cpp@{main.\+cpp}!main@{main}}
+\index{main@{main}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+variables  -\/$>$saisit des utilisateurs  -\/$>$ permet d\textquotesingle{}effectuer les verifications lors des while  -\/$>$ permet de rentré les valeurs pour les cin  tableau -\/$>$ permet de crée le tableau qui va contenir les valeurs futures
+
+menu  -\/$>$c\textquotesingle{}est ici que l\textquotesingle{}utilisateur choisit ce qu\textquotesingle{}il veux faire c\textquotesingle{}est le menu  clear -\/$>$ permet de clear l\textquotesingle{}ecran pour une meilleure visibilité
+
+switch  1 -\/$>$ permet d\textquotesingle{}entrée les valeurs  2 -\/$>$ permet d\textquotesingle{}afficher les valeurs  3 -\/$>$ permet de supprimer une valeur choisie  4 -\/$>$ permet de supprimet toutes les occurences d\textquotesingle{}un nombre choisit
+
+case 1  -\/$>$ permet de retourné sur ce menu .push\+\_\+back -\/$>$ permet de rentré les valeurs a la fin du tableau et de ne pas les ecrasés $<$$<$tableau\mbox{[}y\mbox{]}$<$$<$endl; -\/$>$$>$ ecriture dans le .close()-\/$>$ fermeture du fichier  menu1 -\/$>$ retour à ce menu  debut -\/$>$ retour au menu principal
+
+case 2 \textbackslash{} for (int i = 0;i$<$tableau.\+size();i++) -\/$>$ on affiche toutes les lignes du tableau .size() -\/$>$ taille totale du tableau  debuta -\/$>$ permet de revenir au menu dans effacer l\textquotesingle{}ecran sinon on ne vois pas la liste car elle est effacer grâce au system(\char`\"{}clear\char`\"{})
+
+case 3 (choose3 != tableau\mbox{[}y\mbox{]}) -\/$>$ on compare l\textquotesingle{}entrée utilisateur au contenus du tableau, si elle est bonne on supprime cette ligne sinon on incremente et on passe à la prochaine ligne
+
+case 4 \textbackslash{} while(y != tableau.\+size()) -\/$>$ permet d\textquotesingle{}arreter la boucle quand le tableau n\textquotesingle{}a plus de valeurs
+
+case 5 \textbackslash{} On sort du switch pour quitter le programme
