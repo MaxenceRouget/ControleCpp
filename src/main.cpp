@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Liste.h"
 #include <vector>
+#include <fstream>
 
 using namespace std;
 
@@ -10,6 +11,9 @@ int main()
   int choose, choose2;
 
   vector <liste> tableau;
+  ofstream fichier;
+
+  fichier.open("notes.txt");
 
   debut:
   cout <<" --- Bonjour --- "<<endl;
@@ -35,17 +39,35 @@ int main()
         {
             cout <<"--- Saisir un entier --- "<<endl;
               cin >> entier;
+              tableau.push_back(liste());
+
               tableau[y].nombre = entier;
+               fichier<<tableau[y].nombre<<endl;
+
               y++;
               goto menu1;
+              }
+              else
+              {
+                goto debut;
+              }
+            break;
         }
-        else
-        {
-          goto debut;
-        }
-    break;}
 
     case 2:{
+      for (int i=0; tableau.size(); i++)
+      {
+        cout<<"--- la liste ---"<<endl;
+          if (i == tableau.size())
+          {
+                cout <<"----------"<<endl;
+          }
+          else
+          {
+             cout << tableau[y].nombre << endl;
+          }
+      };
+
 
     break;}
 
