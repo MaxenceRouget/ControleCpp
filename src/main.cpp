@@ -126,7 +126,7 @@ int main()
                {
                  y++;
                };
-        tableau.erase(tableau.begin(),tableau.begin()+y);
+        tableau.erase(tableau.begin()+y);
 
         goto debut;
 
